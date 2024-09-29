@@ -16,8 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n00-ci-s19">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqA-j3-JWS">
+                                <rect key="frame" x="136" y="438.66666666666669" width="121" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sph-3C-D9r"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Urh-F5-Taq"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n00-ci-s19">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -27,15 +38,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="n00-ci-s19" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8kf-l5-y6Y"/>
-                            <constraint firstItem="n00-ci-s19" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TvV-Nu-Jg5"/>
-                            <constraint firstItem="n00-ci-s19" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fbC-fO-6nu"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="n00-ci-s19" secondAttribute="bottom" constant="-34" id="zQp-RX-PpV"/>
+                            <constraint firstItem="KqA-j3-JWS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="24b-Ur-nSI"/>
+                            <constraint firstItem="n00-ci-s19" firstAttribute="centerX" secondItem="KqA-j3-JWS" secondAttribute="centerX" id="4ZZ-ar-3QO"/>
+                            <constraint firstItem="n00-ci-s19" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DXO-TP-KeR"/>
+                            <constraint firstItem="n00-ci-s19" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xe2-f8-rbE"/>
+                            <constraint firstItem="n00-ci-s19" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aH0-bf-vSr"/>
+                            <constraint firstItem="KqA-j3-JWS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oIs-e0-4V9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UYe-Qd-Ivc"/>
                     <connections>
-                        <outlet property="secret" destination="n00-ci-s19" id="fpI-hW-uHq"/>
+                        <outlet property="secret" destination="n00-ci-s19" id="Sze-hO-tgp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
